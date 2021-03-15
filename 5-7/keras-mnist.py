@@ -3,6 +3,10 @@ from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation
 from keras.optimizers import Adam
 from keras.utils import np_utils
+from O import setOS, installPip
+
+setOS()
+installPip("pip install numpy==1.15.4")
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
