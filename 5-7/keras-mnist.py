@@ -19,7 +19,7 @@ y_train = np_utils.to_categorical(y_train, 10)
 y_test = np_utils.to_categorical(y_test, 10)
 
 model = Sequential()
-model.add(Dense(512, input_shape=(784,)))
+model.add(Dense(512, input_shape=(784,)))  # add : 중간층의 레이어들을 추가해주는 메서드
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
 model.add(Dense(512))
@@ -35,3 +35,4 @@ hist = model.fit(x_train, y_train)
 score = model.evaluate(x_test, y_test, verbose=1)
 print('loss=', score[0])
 print('accuracy=', score[1])
+# ganghee-lee.tistory.com/24

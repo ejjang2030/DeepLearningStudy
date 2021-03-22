@@ -56,3 +56,5 @@ hist = model.fit(
 score = model.evaluate(X_test, y_test)
 print('loss=', score[0])
 print('accuracy=', score[1])
+
+
